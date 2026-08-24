@@ -181,7 +181,7 @@ jobs:
         uses: cross-platform-actions/action@24ef01df165c76df1ed2b9f9e9212e78dc2fc963 # v1.4.0
         with:
           operating_system: netbsd
-          version: "10.1"
+          version: "11.0"
 
       - name: Install dependencies
         shell: cpa.sh {0}
