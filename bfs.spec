@@ -1,3 +1,4 @@
+
 Name:           bfs
 Version:        4.1.7
 Release:        %autorelease
@@ -14,7 +15,6 @@ BuildRequires:  pkgconfig(libcap)
 BuildRequires:  pkgconfig(oniguruma)
 BuildRequires:  pkgconfig(liburing)
 BuildRequires:  pkgconfig(libselinux)
-# needed to run check
 BuildRequires:  acl
 
 %description
@@ -29,7 +29,7 @@ command line parser and some additional options.
 %autosetup
 
 %build
-./configure --enable-release
+EXTRA_CFLAGS="-fPIE" ./configure --enable-release
 %make_build
 
 %install
