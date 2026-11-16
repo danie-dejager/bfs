@@ -29,7 +29,7 @@ command line parser and some additional options.
 %autosetup
 
 %build
-EXTRA_CFLAGS="-fPIE" ./configure --enable-release
+EXTRA_CFLAGS="-fPIE -fno-lto" ./configure --enable-release
 %make_build
 
 %install
